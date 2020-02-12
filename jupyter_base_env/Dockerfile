@@ -248,10 +248,3 @@ RUN set -ex \
   && cd .. \
   && rm -rf gsl-2.3 \
   && rm  gsl-2.3.tar.gz
-
-
-
-
-
-
-CMD ["bash"]

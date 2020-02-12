@@ -1,4 +1,4 @@
-FROM wavefier/env_image
+FROM wavefier/jupyter_base_env
 
 # Set environment
 ENV ENV_ROOT /usr/local
@@ -14,7 +14,7 @@ RUN set -ex \
   && cd python-wrapper \
   && python setup.py  install \
   && cd ../../ \
-  && rm -fr p4TSA
-CMD ["/sbin/ldconfig"]
-CMD ["bash"]
+  && rm -fr p4TSA \
+  && /sbin/ldconfig
+
 
