@@ -1,5 +1,7 @@
 FROM wavefier/jupyter_base_env
 
+USER root
+
 # Set environment
 ENV ENV_ROOT /usr/local
 ENV PATH /usr/local/:/usr/local/lib:/usr/local/include:/usr/local/bin:${PATH}
@@ -18,3 +20,4 @@ RUN set -ex \
   && /sbin/ldconfig
 
 
+USER $NB_UID
