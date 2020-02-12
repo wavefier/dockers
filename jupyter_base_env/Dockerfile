@@ -1,5 +1,6 @@
 FROM jupyter/minimal-notebook:3deefc7d16c7
 
+USER root
 
 RUN apt-get update \
   && apt-get update && apt-get install -y --no-install-recommends \
@@ -248,3 +249,6 @@ RUN set -ex \
   && cd .. \
   && rm -rf gsl-2.3 \
   && rm  gsl-2.3.tar.gz
+
+
+USER $NB_UID
