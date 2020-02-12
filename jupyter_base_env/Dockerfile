@@ -132,9 +132,9 @@ RUN pip install alabaster \
   pydicom \
   pydot \
   pydot-ng \
-  pyemd \
-  pyflux \
-  Pygments \
+  pyemd 
+
+RUN pip install Pygments \
   pymongo \
   Pympler \
   pyparsing \
