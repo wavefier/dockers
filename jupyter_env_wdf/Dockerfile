@@ -2,7 +2,7 @@ FROM wavefier/jupyter_base_env
 
 USER root
 # get the previews gcc
-RUN apt install software-properties-common && \
+RUN apt-get update && apt install software-properties-common && \
   add-apt-repository ppa:ubuntu-toolchain-r/test && \
   apt install gcc-5 g++-5 && \
   update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 90 --slave /usr/bin/g++ g++ /usr/bin/g++-5 --slave /usr/bin/gcov gcov /usr/bin/gcov-5
